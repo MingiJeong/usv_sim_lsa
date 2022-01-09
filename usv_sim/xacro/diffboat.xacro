@@ -30,6 +30,18 @@
         </plugin>
     </gazebo>  
 
+    <gazebo>
+        <plugin name="object_controller" filename="libgazebo_ros_planar_move.so">
+        <commandTopic>cmd_vel</commandTopic>
+        <odometryTopic>odom</odometryTopic>
+        <odometryFrame>odom</odometryFrame>
+        <odometryRate>20.0</odometryRate>
+        <robotBaseFrame>base_link</robotBaseFrame>
+        <robotNamespace>diffboat</robotNamespace>
+        </plugin>   
+    </gazebo>
+
+
     <!-- Define two steering thrusters, with assumed force control in Z-direction -->
     
     <xacro:thruster_link name="fwd_left"  xyz="-0.3 0 -0.1" rpy="0 ${-PI/2-0.26} 0" rotationAxis="1 0 0" lowerLimit="0" upperLimit="0" parentLink="back_l_link"/>
