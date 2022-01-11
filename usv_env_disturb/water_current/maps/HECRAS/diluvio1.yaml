@@ -1,4 +1,5 @@
-filename: /home/paravisi/hecrasmaps/diluvio1-7m/t3.p01.hdf
+# filename: /home/paravisi/hecrasmaps/diluvio1-7m/t3.p01.hdf
+filename: /home/mingi/usv_sim_ws/install_isolated/share/water_current/maps/t3.p01.hdf
 ref: [477092.4903, 6675824.0]
 nodeCoordinate: "FacePoints Coordinate"
 nodeNameX: "Node X Vel"

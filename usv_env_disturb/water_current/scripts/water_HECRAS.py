@@ -39,7 +39,7 @@ arrayY = []
 indexMap = []
 showVehicleOnMap = 1;
 
-
+# TODO: frame id
 
 pub = rospy.Publisher('waterflow', OccupancyGrid, queue_size=1)
 mymap = OccupancyGrid();
@@ -145,7 +145,7 @@ def startRosService():
 def loadMap():
 	global arrayX, arrayY, width, height, originX, originY, mymap, filename, time
 
-	mymap.header.frame_id="odom";
+	mymap.header.frame_id="map"; #odom
 	mymap.info.resolution = resolution;
 	mymap.info.width = width;
 	mymap.info.height = height;

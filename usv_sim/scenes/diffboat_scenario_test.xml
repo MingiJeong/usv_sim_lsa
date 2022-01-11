@@ -6,7 +6,7 @@
   <oceanState>
     <windx> 1.0 </windx> <!-- 1 -->
     <windy> 1.0 </windy> <!-- 1 -->
-    <windSpeed> 10.0 </windSpeed> <!-- 3.2 -->
+    <windSpeed> 3.2 </windSpeed> <!-- 3.2 -->
     <depth> 100 </depth>
     <reflectionDamping> 0.35 </reflectionDamping>
     <waveScale> 5e-8 </waveScale> <!-- 5e-8 -->
@@ -48,13 +48,13 @@
     <near> 1 </near>
     <far> 10000 </far>
     <position>
-      <x>230</x>
-      <y>95 </y>
+      <x>150</x>
+      <y>50 </y>
       <z>15 </z>
     </position> 
     <lookAt>
-      <x>245</x>
-      <y>95 </y>
+      <x>150</x>
+      <y>50 </y>
       <z>5 </z>
     </lookAt>
   </camera>
@@ -68,7 +68,7 @@
     </jointValues>
      <position>
       <x> 240 </x>
-      <y> 50 </y>
+      <y> 100 </y>
       <z> 1 </z>
     </position>
     <orientation>
@@ -87,7 +87,7 @@
     </jointValues>
      <position>
       <x> 50</x>
-      <y> 50 </y>
+      <y> 100 </y>
       <z> 1 </z>
     </position>
     <orientation>
@@ -106,7 +106,7 @@
     </jointValues>
      <position>
       <x> 55</x>
-      <y> 55 </y>
+      <y> 105 </y>
       <z> 1 </z>
     </position>
     <orientation>
@@ -125,7 +125,7 @@
     </jointValues>
      <position>
       <x> 45</x>
-      <y> 55 </y>
+      <y> 105 </y>
       <z> 1 </z>
     </position>
     <orientation>

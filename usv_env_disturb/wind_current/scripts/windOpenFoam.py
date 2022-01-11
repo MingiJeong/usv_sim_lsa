@@ -107,7 +107,8 @@ def parse_config_file(config_file_name):
 	global pkg_path, fieldNames, fieldsVX, fieldsVY, fieldsVZ
 	global originX, originY, originZ, cellSizeX, cellSizeY, cellSizeZ
 	global sizeX, sizeY, sizeZ, time
-	with open(pkg_path+"/"+config_file_name, 'r') as stream:
+	# with open(pkg_path+"/"+config_file_name, 'r') as stream:
+	with open(config_file_name, 'r') as stream:
         	data_loaded = yaml.load(stream)
 	print ('--------------------- Loading yaml file ', config_file_name)
 	print ('--------------------- data_loaded: ', data_loaded)
@@ -190,7 +191,7 @@ def loadMapVX(id, z):
 	global fieldsVX, cellSizeX
 	mynorm = matplotlib.colors.Normalize(vmin=-0.1,vmax=0.1);
 
-	mymap.header.frame_id="world";
+	mymap.header.frame_id="map"; #world
 	mymap.info.resolution = cellSizeX;
 	mymap.info.width = sizeX;
 	mymap.info.height = sizeY;
@@ -223,7 +224,8 @@ def loadMapVX(id, z):
 if __name__ == '__main__':
 	rospy.init_node('wind_current')
 	rospy.loginfo ("starting wind_current. argument count: %d", len(sys.argv))
-	if (len(sys.argv)!=3):
+	# if (len(sys.argv)!=3):
+	if (len(sys.argv)!=5):
 		rospy.logerr ("###################Error: argument count invalid! %d", len(sys.argv))
 		for i in range(0, len(sys.argv)):
 			rospy.logerr(" argv %d : %s", i, sys.argv[i])
