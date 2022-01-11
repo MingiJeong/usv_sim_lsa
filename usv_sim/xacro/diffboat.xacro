@@ -17,16 +17,16 @@
     1. change name 
     2. inside robot namespace -->
     <!-- planar move plugin for cmd_vel control -->
-    <!-- <gazebo>
+    <gazebo>
         <plugin name="object_controller" filename="libgazebo_ros_planar_move.so">
         <commandTopic>cmd_vel</commandTopic>
         <odometryTopic>odom</odometryTopic>
-        <odometryFrame>${robotName}/odometry</odometryFrame>
+        <odometryFrame>${robotName}/odom</odometryFrame>
         <odometryRate>20.0</odometryRate>
-        <robotBaseFrame>${robotName}/test</robotBaseFrame>
+        <robotBaseFrame>${robotName}/base_link</robotBaseFrame>
         <robotNamespace>${robotName}</robotNamespace>
         </plugin>   
-    </gazebo> -->
+    </gazebo>
 
 
     <!-- Plugin list -->
