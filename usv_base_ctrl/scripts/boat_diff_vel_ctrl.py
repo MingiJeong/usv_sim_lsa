@@ -37,21 +37,27 @@ class VelocityCtrl():
         self.target_vel_ant = Twist()
         self.thruster_msg = JointState()
         self.thruster_msg.header = Header()
-        self.kp_lin = 80
-        self.ki_lin = 200
+        self.kp_lin = 80 # 80
+        self.ki_lin = 200 # 200
+        self.kd_lin = 220 # 120
         thruster_name = 'fwd_left, fwd_right'
         self.I_ant_lin = 0
         self.I_ant_ang = 0
+        self.D_ant_lin = 0
+        self.D_ant_ang = 0
         self.lin_vel = 0
         self.lin_vel_ang = 0
         self.ang_vel = 0
-        self.kp_ang = 80 
-        self.ki_ang = 100
-        self.thruster_max = 30
+        self.kp_ang = 80 # 80
+        self.ki_ang = 200 # 100
+        self.kd_ang = 220 # 120
+        self.thruster_max = 80 # 30, 50
         self.vel_left = 0
         self.vel_right = 0
         self.thruster_command = numpy.array([0, 0])
         self.erro = 0
+        self.prev_error_lin = None 
+        self.prev_error_ang = None
 
         self.pub_motor = rospy.Publisher('thruster_command', JointState, queue_size=10)
 
@@ -63,8 +69,14 @@ class VelocityCtrl():
             r.sleep()
 
     def vel_ctrl(self):
+
+        # linear control
         self.lin_vel = self.target_vel.linear.x - self.usv_vel.twist.twist.linear.x
-        self.lin_vel = self.lin_vel * self.kp_lin + self.I_lin(self.lin_vel)
+        # self.lin_vel = self.lin_vel * self.kp_lin + self.I_lin(self.lin_vel) 
+        if self.lin_vel > 0.3:
+            self.lin_vel = self.lin_vel * self.kp_lin + self.I_lin(self.lin_vel)  + self.kd_lin * self.D_lin(self.lin_vel)
+        else:
+            self.lin_vel = self.usv_vel.twist.twist.linear.x
 
         #if self.target_vel.angular.z != self.target_vel_ant.angular.z:
         #    self.I_ant_ang = 0
@@ -75,7 +87,13 @@ class VelocityCtrl():
         else: 
             self.ang_vel = self.target_vel.angular.z - self.usv_vel.twist.twist.angular.z
             self.erro = self.ang_vel
-            self.ang_vel = self.ang_vel * self.kp_ang + self.I_ang(self.ang_vel)
+
+            if self.erro > 0.2:
+                # self.ang_vel = self.ang_vel * self.kp_ang + self.I_ang(self.ang_vel)
+                self.ang_vel = self.ang_vel * self.kp_ang + self.I_ang(self.ang_vel) + self.kd_ang * self.D_ang(self.ang_vel)
+            else:
+                self.ang_vel = self.usv_vel.twist.twist.angular.z
+            
             self.vel_left = self.lin_vel - self.ang_vel
             self.vel_right = self.lin_vel + self.ang_vel
                    
@@ -90,6 +108,18 @@ class VelocityCtrl():
         self.I_ant_lin = self.I_ant_lin + erro * self.ki_lin * 1/self.rate
         return self.I_ant_lin
 
+    def D_lin(self, erro):
+        if self.prev_error_lin is not None:
+            # delta_time = 1/self.rate
+            self.D_ant_lin = (erro - self.prev_error_lin) / 0.1
+
+        else:
+            self.D_ant_lin = 0
+            self.prev_error_ang = erro
+        
+        return self.D_ant_lin
+
+
     def sat_thruster(self, thruster):
         if thruster > self.thruster_max:
             thruster = self.thruster_max
@@ -101,6 +131,18 @@ class VelocityCtrl():
         self.I_ant_ang = self.I_ant_ang + erro * self.ki_ang * 1/self.rate
         self.I_ant_ang = self.sat_thruster(self.I_ant_ang)
         return self.I_ant_ang
+
+    def D_ang(self, erro):
+        if self.prev_error_ang is not None:
+            # delta_time = 1/self.rate
+            self.D_ant_ang = (erro - self.prev_error_ang) / 0.1
+
+        else:
+            self.D_ant_lin = 0
+            self.D_ant_ang = erro
+        
+        return self.D_ant_ang
+
     
 if __name__ == '__main__':
     try:
