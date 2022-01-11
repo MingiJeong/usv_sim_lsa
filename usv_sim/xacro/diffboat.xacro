@@ -34,7 +34,7 @@
         <plugin name="freefloating_gazebo_control" filename="libfreefloating_gazebo_control.so">
             <switchService>switch</switchService>
             <updateRate>100</updateRate>
-            <link>fwd_left</link>
+            <link>${robotName}/fwd_left</link>
             <thruster>
 				<effortUnderWater>11.5</effortUnderWater>
 				<effortOverWater>0</effortOverWater>
