@@ -105,8 +105,8 @@
       <joint> 0 </joint>
     </jointValues>
      <position>
-      <x> 55</x>
-      <y> 105 </y>
+      <x> 60</x>
+      <y> 110 </y>
       <z> 1 </z>
     </position>
     <orientation>
@@ -124,8 +124,8 @@
       <joint> 0 </joint>
     </jointValues>
      <position>
-      <x> 45</x>
-      <y> 105 </y>
+      <x> 40</x>
+      <y> 110</y>
       <z> 1 </z>
     </position>
     <orientation>
