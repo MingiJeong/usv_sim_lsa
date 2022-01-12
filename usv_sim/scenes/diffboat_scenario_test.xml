@@ -67,14 +67,14 @@
       <joint> 0 </joint>
     </jointValues>
      <position>
-      <x> 0 </x>
+      <x> 240 </x>
       <y> 100 </y>
       <z> 1 </z>
     </position>
     <orientation>
       <r>0 </r>
       <p>0 </p>
-      <y>0.34 </y>
+      <y>3.14 </y>
     </orientation>
   </vehicle>
 
@@ -93,7 +93,7 @@
     <orientation>
       <r>0 </r>
       <p>0 </p>
-      <y>0.34 </y>
+      <y>0.37 </y>
     </orientation>
   </vehicle>
 
@@ -131,7 +131,7 @@
     <orientation>
       <r>0 </r>
       <p>0 </p>
-      <y>0.34 </y>
+      <y>0.37 </y>
     </orientation>
   </vehicle>
 

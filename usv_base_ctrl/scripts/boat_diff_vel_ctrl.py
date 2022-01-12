@@ -49,7 +49,7 @@ class VelocityCtrl():
         self.lin_vel_ang = 0
         self.ang_vel = 0
         self.kp_ang = 160 # 80, 80, 150
-        self.ki_ang = 200 # 100, 300, 200
+        self.ki_ang = 250 # 100, 300, 200
         self.kd_ang = 260 # 120, 220, 260
         self.thruster_max = 50 # 30, 50, 60
         self.vel_left = 0
