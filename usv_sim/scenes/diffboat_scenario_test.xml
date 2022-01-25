@@ -50,7 +50,7 @@
     <position>
       <x>150</x>
       <y>50 </y>
-      <z>15 </z>
+      <z>20 </z>
     </position> 
     <lookAt>
       <x>150</x>
@@ -116,6 +116,7 @@
     </orientation>
   </vehicle>
 
+
     <vehicle>
     <name>robot_3</name>
     <file>urdf/diffboat_uwsim.urdf</file>
@@ -133,6 +134,11 @@
       <p>0 </p>
       <y>0.37 </y>
     </orientation>
+    <scaleFactor>
+      <x> 9.52</x>
+      <y> 9.52</y>
+      <z> 9.52 </z>
+    </scaleFactor>
   </vehicle>
 
 

@@ -4,6 +4,8 @@
 
     <xacro:arg name="robotName" default="diffboat" />
     <xacro:property name="robotName" value="$(arg robotName)" />
+    <xacro:arg name="scale" default="0.21" />
+    <xacro:property name="scale" value="$(arg scale)" />
     <xacro:arg name="windType" default="global" />
     <xacro:arg name="waterType" default="global" />
     <xacro:property name="windType" value="$(arg windType)" />

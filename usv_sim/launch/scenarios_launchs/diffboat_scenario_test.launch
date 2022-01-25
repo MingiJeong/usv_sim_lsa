@@ -71,8 +71,11 @@
             <arg name="namespace" value="$(arg forth_robot_ns)"/>
             <arg name="windType" value="$(arg windType)"/>
             <arg name="waterType" value="$(arg waterType)"/>
+			<arg name="scale" value="2" />
         </include>
 		
+		<node pkg="tf" type="static_transform_publisher" name="map_tf_broadcaster" args="0 0 0 0 0 0 map world 10" />
+
 		<!-- recording experiment -->
 		<node pkg="rosbag" type="record" name="record_diffboat" args="-O $(find usv_navigation)/bags/diffboat_scenario_test.bag /$(arg first_robot_ns)/state" output="screen" if="$(arg rec)"/>
 

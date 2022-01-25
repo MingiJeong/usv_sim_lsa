@@ -11,7 +11,9 @@
     <xacro:property name="back_water_displaced_mass" value="10"/>
     <xacro:property name="middle_water_displaced_mass" value="10"/>
     <xacro:property name="front_water_displaced_mass" value="5"/>
-    <xacro:property name="scale" value="0.21"/>
+    <!-- <xacro:property name="scale" value="0.21"/> -->
+    <xacro:arg name="scale" default="0.21" />
+    <xacro:property name="scale" value="$(arg scale)" />
     <xacro:property name="bl1" value=".1" />
     <xacro:property name="bl2" value=".1" />
     
