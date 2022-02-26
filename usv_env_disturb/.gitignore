@@ -16,7 +16,7 @@ install/
 *.user
 lib/
 ros_intalled/
-
+diluvio/
 
 *.hdf
 

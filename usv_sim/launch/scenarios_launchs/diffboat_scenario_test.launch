@@ -4,8 +4,8 @@
 	<arg name="gui" default="false"/>
 	<arg name="parse" default="false"/>
 	<arg name="rec" default="false"/>
-	<arg name="windType" default="global"/>
-	<arg name="waterType" default="global"/>
+	<arg name="windType" default="local"/>
+	<arg name="waterType" default="local"/>
 
     <!-- spawn uwsim -->
 	<group unless="$(arg parse)">
