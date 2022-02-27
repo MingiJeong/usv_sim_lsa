@@ -51,7 +51,7 @@ class VelocityCtrl():
         self.kp_ang = 160 # 80, 80, 150
         self.ki_ang = 250 # 100, 300, 200
         self.kd_ang = 260 # 120, 220, 260
-        self.thruster_max = 50 # 30, 50, 60
+        self.thruster_max = 50 # 30, 50
         self.vel_left = 0
         self.vel_right = 0
         self.thruster_command = numpy.array([0, 0])

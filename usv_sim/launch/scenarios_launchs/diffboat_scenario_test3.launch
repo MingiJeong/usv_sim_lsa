@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<launch>
+
+	<arg name="gui" default="false"/>
+	<arg name="parse" default="false"/>
+	<arg name="rec" default="false"/>
+	<arg name="windType" default="local"/>
+	<arg name="waterType" default="local"/>
+
+    <!-- spawn uwsim -->
+	<group unless="$(arg parse)">
+		<arg name="disableShaders" default="false"/>
+		<!-- <arg name="namespace" default="diffboat"/>   -->
+		<arg name="first_robot_ns" default="robot_0"/>  
+        <arg name="second_robot_ns" default="robot_1"/>  
+		<arg name="third_robot_ns" default="robot_2"/>  
+		<arg name="forth_robot_ns" default="robot_3"/>
+		<arg name="fifth_robot_ns" default="robot_4"/>
+		<arg name="sixth_robot_ns" default="robot_5"/>
+		<arg name="seventh_robot_ns" default="robot_6"/>
+		<arg name="eighth_robot_ns" default="robot_7"/>
+		<arg name="ninth_robot_ns" default="robot_8"/>
+		<arg name="tenth_robot_ns" default="robot_9"/>
+		<arg name="eleventh_robot_ns" default="robot_10"/>   
+    	<arg name="spawnGazebo" default="true"/>
+    	
+	    <!-- Launch Gazebo with empty world -->
+	    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+	        <arg name="use_sim_time" value="true" />
+	        <arg name="debug" value="false" />
+	        <arg name="gui" value="true" />
+	        <arg name="paused" value="true"/>
+	        <arg name="verbose" value="true"/>
+	        <arg name="world_name" value="$(find usv_sim)/world/empty.world"/>
+	    </include>
+
+		<!-- launch uwsim -->
+		<node name="uwsim" pkg="uwsim" type="uwsim" args="$(arg disableShaders) --dataPath $(find usv_sim) --configfile scenes/diffboat_scenario_test3.xml" respawn="false" required="true"/>
+		
+		<!-- using parser  -->
+		<include file="$(find usv_sim)/launch/scenarios_launchs/diffboat_scenario_test3_spawner.launch"/>
+		<!-- one include and one node to each vehicle -->
+		<!-- uncomment this as I want to control my own -->
+		<!-- <node name="patrol" pkg="usv_navigation" type="patrol_pid_scene1.py" ns="diffboat" unless="$(arg gui)"/> -->
+		
+        <!-- TODO  multiple robots -->
+		<!-- controlled ASV -->
+		<include file="$(find usv_sim)/launch/models/spawn_diffboat.launch">
+            <arg name="gui" value="$(arg gui)"/>
+            <arg name="spawnGazebo" value="$(arg spawnGazebo)"/>
+            <arg name="namespace" value="$(arg first_robot_ns)"/>
+            <arg name="windType" value="$(arg windType)"/>
+            <arg name="waterType" value="$(arg waterType)"/>
+            <arg name="scale" value="0.84" />
+        </include>
+    
+		<!-- robot_1 -->
+		<include file="$(find usv_sim)/launch/models/spawn_diffboat.launch">
+            <arg name="gui" value="$(arg gui)"/>
+            <arg name="spawnGazebo" value="$(arg spawnGazebo)"/>
+            <arg name="namespace" value="$(arg second_robot_ns)"/>
+            <arg name="windType" value="$(arg windType)"/>
+            <arg name="waterType" value="$(arg waterType)"/>
+            <arg name="scale" value="0.84" />
+        </include>
+
+		<!-- robot_2 -->
+		<include file="$(find usv_sim)/launch/models/spawn_diffboat.launch">
+            <arg name="gui" value="$(arg gui)"/>
+            <arg name="spawnGazebo" value="$(arg spawnGazebo)"/>
+            <arg name="namespace" value="$(arg third_robot_ns)"/>
+            <arg name="windType" value="$(arg windType)"/>
+            <arg name="waterType" value="$(arg waterType)"/>
+            <arg name="scale" value="0.84" />
+        </include>
+
+		<!-- robot_3 -->
+		<include file="$(find usv_sim)/launch/models/spawn_diffboat.launch">
+            <arg name="gui" value="$(arg gui)"/>
+            <arg name="spawnGazebo" value="$(arg spawnGazebo)"/>
+            <arg name="namespace" value="$(arg forth_robot_ns)"/>
+            <arg name="windType" value="$(arg windType)"/>
+            <arg name="waterType" value="$(arg waterType)"/>
+			<arg name="scale" value="2" />
+        </include>
+		
+		<!-- robot_4 -->
+		<include file="$(find usv_sim)/launch/models/spawn_diffboat.launch">
+            <arg name="gui" value="$(arg gui)"/>
+            <arg name="spawnGazebo" value="$(arg spawnGazebo)"/>
+            <arg name="namespace" value="$(arg fifth_robot_ns)"/>
+            <arg name="windType" value="$(arg windType)"/>
+            <arg name="waterType" value="$(arg waterType)"/>
+			<arg name="scale" value="0.84" />
+        </include>
+
+		<!-- robot_5 -->
+		<include file="$(find usv_sim)/launch/models/spawn_diffboat.launch">
+            <arg name="gui" value="$(arg gui)"/>
+            <arg name="spawnGazebo" value="$(arg spawnGazebo)"/>
+            <arg name="namespace" value="$(arg sixth_robot_ns)"/>
+            <arg name="windType" value="$(arg windType)"/>
+            <arg name="waterType" value="$(arg waterType)"/>
+			<arg name="scale" value="2" />
+        </include>
+
+		<!-- robot_6 -->
+		<!-- <include file="$(find usv_sim)/launch/models/spawn_diffboat.launch">
+            <arg name="gui" value="$(arg gui)"/>
+            <arg name="spawnGazebo" value="$(arg spawnGazebo)"/>
+            <arg name="namespace" value="$(arg seventh_robot_ns)"/>
+            <arg name="windType" value="$(arg windType)"/>
+            <arg name="waterType" value="$(arg waterType)"/>
+        </include> -->
+
+		<!-- robot_7 -->
+		<!-- <include file="$(find usv_sim)/launch/models/spawn_diffboat.launch">
+            <arg name="gui" value="$(arg gui)"/>
+            <arg name="spawnGazebo" value="$(arg spawnGazebo)"/>
+            <arg name="namespace" value="$(arg eighth_robot_ns)"/>
+            <arg name="windType" value="$(arg windType)"/>
+            <arg name="waterType" value="$(arg waterType)"/>
+
+        </include> -->
+
+		<!-- robot_8 -->
+		<!-- <include file="$(find usv_sim)/launch/models/spawn_diffboat.launch">
+            <arg name="gui" value="$(arg gui)"/>
+            <arg name="spawnGazebo" value="$(arg spawnGazebo)"/>
+            <arg name="namespace" value="$(arg ninth_robot_ns)"/>
+            <arg name="windType" value="$(arg windType)"/>
+            <arg name="waterType" value="$(arg waterType)"/>
+
+        </include> -->
+
+		<!-- robot_9 -->
+		<!-- <include file="$(find usv_sim)/launch/models/spawn_diffboat.launch">
+            <arg name="gui" value="$(arg gui)"/>
+            <arg name="spawnGazebo" value="$(arg spawnGazebo)"/>
+            <arg name="namespace" value="$(arg tenth_robot_ns)"/>
+            <arg name="windType" value="$(arg windType)"/>
+            <arg name="waterType" value="$(arg waterType)"/>
+
+        </include> -->
+
+
+		<!-- robot_10 -->
+		<!-- <include file="$(find usv_sim)/launch/models/spawn_diffboat.launch">
+            <arg name="gui" value="$(arg gui)"/>
+            <arg name="spawnGazebo" value="$(arg spawnGazebo)"/>
+            <arg name="namespace" value="$(arg eleventh_robot_ns)"/>
+            <arg name="windType" value="$(arg windType)"/>
+            <arg name="waterType" value="$(arg waterType)"/>
+			<arg name="scale" value="2" />
+        </include> -->
+
+
+		<node pkg="tf" type="static_transform_publisher" name="map_tf_broadcaster" args="0 0 0 0 0 0 map world 10" />
+
+		<!-- recording experiment -->
+		<node pkg="rosbag" type="record" name="record_diffboat" args="-O $(find usv_navigation)/bags/diffboat_scenario_test.bag /$(arg first_robot_ns)/state" output="screen" if="$(arg rec)"/>
+
+	</group>
+			
+	<!-- parse launch file -->
+	<group if="$(arg parse)">
+		<node name="scene_to_spawner" pkg="freefloating_gazebo" type="uwsim_scene_to_gazebo_spawner.py" args="$(find usv_sim)/launch/scenarios_launchs/diffboat_scenario_test3.launch" output="screen" required="true"/>
+	</group>
+
+</launch>

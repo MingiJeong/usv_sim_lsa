@@ -36,26 +36,28 @@
   
   <simParams>
     <disableShaders> 0 </disableShaders>
-    <resw> 1152 </resw>
-    <resh> 864 </resh>
+    <!-- <resw> 1152 </resw>
+    <resh> 864 </resh> -->
+    <resw> 800 </resw>
+    <resh> 600 </resh>
   </simParams>
 
   <!-- http://www.irs.uji.es/uwsim/wiki/index.php?title=Camera -->
   <camera>
-    <freeMotion> 0 </freeMotion>
+    <freeMotion> 1 </freeMotion>
     <objectToTrack>robot_0/base_link</objectToTrack>
-    <fov> 100 </fov>
+    <fov> 130 </fov>
     <aspectRatio> 1.33 </aspectRatio>
     <near> 1 </near>
     <far> 10000 </far>
     <position>
       <x>150</x>
-      <y>50 </y>
-      <z>80 </z>
+      <y>80 </y>
+      <z>60 </z>
     </position> 
     <lookAt>
       <x>150</x>
-      <y>50 </y>
+      <y>100 </y>
       <z>5 </z>
     </lookAt>
   </camera>
@@ -77,6 +79,11 @@
       <p>0 </p>
       <y>3.14 </y>
     </orientation>
+    <scaleFactor>
+      <x> 4.0 </x>
+      <y> 4.0 </y>
+      <z> 4.0 </z>
+    </scaleFactor>
   </vehicle>
 
   <vehicle>
@@ -96,6 +103,11 @@
       <p>0 </p>
       <y>0.37 </y>
     </orientation>
+    <scaleFactor>
+      <x> 4.0 </x>
+      <y> 4.0 </y>
+      <z> 4.0 </z>
+    </scaleFactor>
   </vehicle>
 
   <vehicle>
@@ -115,6 +127,11 @@
       <p>0 </p>
       <y>0.34 </y>
     </orientation>
+    <scaleFactor>
+      <x> 4.0 </x>
+      <y> 4.0 </y>
+      <z> 4.0 </z>
+    </scaleFactor>
   </vehicle>
 
 

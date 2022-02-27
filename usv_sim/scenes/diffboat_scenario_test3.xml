@@ -1,0 +1,1018 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE UWSimScene SYSTEM "UWSimScene.dtd" >
+
+<UWSimScene>
+  <oceanState>
+    <windx> 1.0 </windx> <!-- 1 -->
+    <windy> 1.0 </windy> <!-- 1 -->
+    <windSpeed> 3.2 </windSpeed> <!-- 3.2 -->
+    <depth> 100 </depth>
+    <reflectionDamping> 0.5 </reflectionDamping>
+    <waveScale> 5e-8 </waveScale> <!-- 5e-8 -->
+    <isNotChoppy> 0 </isNotChoppy>
+    <choppyFactor> -1.5 </choppyFactor>
+    <crestFoamHeight> 0.8 </crestFoamHeight> <!-- 1.2 -->
+    <oceanSurfaceHeight> 1 </oceanSurfaceHeight>
+    <fog>
+      <density> 0.1 </density>
+      <color>
+        <r>0.017</r>
+        <g>0.027</g>
+        <b>0.079</b>
+      </color>
+    </fog>
+    <color>
+        <r>0.55</r>
+        <g>0.45</g>
+        <b>0.33</b>
+    </color>
+    <attenuation>
+      <r>0.15</r>
+      <g>0.15 </g>
+      <b> 0.05 </b>
+    </attenuation>
+  </oceanState>
+  
+  <simParams>
+    <disableShaders> 0 </disableShaders>
+    <resw> 1200 </resw>
+    <resh> 1000 </resh>
+  </simParams>
+
+  <!-- http://www.irs.uji.es/uwsim/wiki/index.php?title=Camera -->
+  <camera>
+    <freeMotion> 1 </freeMotion>
+    <objectToTrack>robot_0/base_link</objectToTrack>
+    <fov> 130 </fov>
+    <aspectRatio> 1.33 </aspectRatio>
+    <near> 10 </near>
+    <far> 10000 </far>
+    <position>
+      <x>200</x>
+      <y>80 </y>
+      <z>60 </z>
+    </position> 
+    <lookAt>
+      <x>200</x>
+      <y>100 </y>
+      <z>5 </z>
+    </lookAt>
+  </camera>
+
+  <vehicle>
+    <name>robot_0</name>
+    <file>urdf/diffboat_uwsim.urdf</file>
+    <jointValues>
+      <joint> 0 </joint>
+      <joint> 0 </joint>
+    </jointValues>
+     <position>
+      <x> 320 </x>
+      <y> 120 </y>
+      <z> 1 </z>
+    </position>
+    <orientation>
+      <r>0 </r>
+      <p>0 </p>
+      <y>3.14 </y>
+    </orientation>
+    <scaleFactor>
+      <x> 4.0 </x>
+      <y> 4.0 </y>
+      <z> 4.0 </z>
+    </scaleFactor>
+  </vehicle>
+
+  <vehicle>
+    <name>robot_1</name>
+    <file>urdf/diffboat_uwsim.urdf</file>
+    <jointValues>
+      <joint> 0 </joint>
+      <joint> 0 </joint>
+    </jointValues>
+     <position>
+      <x> 100</x>
+      <y> 190 </y>
+      <z> 1 </z>
+    </position>
+    <orientation>
+      <r>0 </r>
+      <p>0 </p>
+      <y>-0.10 </y>
+    </orientation>
+    <scaleFactor>
+      <x> 4.0 </x>
+      <y> 4.0 </y>
+      <z> 4.0 </z>
+    </scaleFactor>
+  </vehicle>
+
+  <vehicle>
+    <name>robot_2</name>
+    <file>urdf/diffboat_uwsim.urdf</file>
+    <jointValues>
+      <joint> 0 </joint>
+      <joint> 0 </joint>
+    </jointValues>
+     <position>
+      <x> 200</x>
+      <y> 210 </y>
+      <z> 1 </z>
+    </position>
+    <orientation>
+      <r>0 </r>
+      <p>0 </p>
+      <y>-1.57 </y>
+    </orientation>
+    <scaleFactor>
+      <x> 4.0 </x>
+      <y> 4.0 </y>
+      <z> 4.0 </z>
+    </scaleFactor>
+  </vehicle>
+
+
+    <vehicle>
+    <name>robot_3</name>
+    <file>urdf/diffboat_uwsim.urdf</file>
+    <jointValues>
+      <joint> 0 </joint>
+      <joint> 0 </joint>
+    </jointValues>
+     <position>
+      <x> 210</x>
+      <y> 220</y>
+      <z> 1 </z>
+    </position>
+    <orientation>
+      <r>0 </r>
+      <p>0 </p>
+      <y>-1.57 </y>
+    </orientation>
+    <scaleFactor>
+      <x> 9.52</x>
+      <y> 9.52</y>
+      <z> 9.52 </z>
+    </scaleFactor>
+  </vehicle>
+
+  <vehicle>
+    <name>robot_4</name>
+    <file>urdf/diffboat_uwsim.urdf</file>
+    <jointValues>
+      <joint> 0 </joint>
+      <joint> 0 </joint>
+    </jointValues>
+     <position>
+      <x> 120</x>
+      <y> 130 </y>
+      <z> 1 </z>
+    </position>
+    <orientation>
+      <r>0 </r>
+      <p>0 </p>
+      <y>0.4 </y>
+    </orientation>
+    <scaleFactor>
+      <x> 4.0 </x>
+      <y> 4.0 </y>
+      <z> 4.0 </z>
+    </scaleFactor>
+  </vehicle>  
+
+  <vehicle>
+    <name>robot_5</name>
+    <file>urdf/diffboat_uwsim.urdf</file>
+    <jointValues>
+      <joint> 0 </joint>
+      <joint> 0 </joint>
+    </jointValues>
+     <position>
+      <x> 110</x>
+      <y> 110 </y>
+      <z> 1 </z>
+    </position>
+    <orientation>
+      <r>0 </r>
+      <p>0 </p>
+      <y>0.4</y>
+    </orientation>
+    <scaleFactor>
+      <x> 9.52</x>
+      <y> 9.52</y>
+      <z> 9.52 </z>
+    </scaleFactor>
+  </vehicle>  
+
+  <!-- <vehicle>
+    <name>robot_6</name>
+    <file>urdf/diffboat_uwsim.urdf</file>
+    <jointValues>
+      <joint> 0 </joint>
+      <joint> 0 </joint>
+    </jointValues>
+     <position>
+      <x> 40</x>
+      <y> 40 </y>
+      <z> 1 </z>
+    </position>
+    <orientation>
+      <r>0 </r>
+      <p>0 </p>
+      <y>1.57 </y>
+    </orientation>
+  </vehicle> 
+
+  <vehicle>
+    <name>robot_7</name>
+    <file>urdf/diffboat_uwsim.urdf</file>
+    <jointValues>
+      <joint> 0 </joint>
+      <joint> 0 </joint>
+    </jointValues>
+     <position>
+      <x> 50</x>
+      <y> 200 </y>
+      <z> 1 </z>
+    </position>
+    <orientation>
+      <r>0 </r>
+      <p>0 </p>
+      <y>-1.57 </y>
+    </orientation>
+  </vehicle>  -->
+
+<!-- 
+  <vehicle>
+    <name>robot_8</name>
+    <file>urdf/diffboat_uwsim.urdf</file>
+    <jointValues>
+      <joint> 0 </joint>
+      <joint> 0 </joint>
+    </jointValues>
+     <position>
+      <x> 40</x>
+      <y> 190 </y>
+      <z> 1 </z>
+    </position>
+    <orientation>
+      <r>0 </r>
+      <p>0 </p>
+      <y>-1.57 </y>
+    </orientation>
+  </vehicle> 
+
+
+  <vehicle>
+    <name>robot_9</name>
+    <file>urdf/diffboat_uwsim.urdf</file>
+    <jointValues>
+      <joint> 0 </joint>
+      <joint> 0 </joint>
+    </jointValues>
+     <position>
+      <x> 20</x>
+      <y> 150 </y>
+      <z> 1 </z>
+    </position>
+    <orientation>
+      <r>0 </r>
+      <p>0 </p>
+      <y>-2.09</y>
+    </orientation>
+  </vehicle> 
+
+
+
+  <vehicle>
+    <name>robot_10</name>
+    <file>urdf/diffboat_uwsim.urdf</file>
+    <jointValues>
+      <joint> 0 </joint>
+      <joint> 0 </joint>
+    </jointValues>
+     <position>
+      <x> 10</x>
+      <y> 30 </y>
+      <z> 1 </z>
+    </position>
+    <orientation>
+      <r>0 </r>
+      <p>0 </p>
+      <y>-2.09 </y>
+    </orientation>
+    <scaleFactor>
+      <x> 9.52</x>
+      <y> 9.52</y>
+      <z> 9.52 </z>
+    </scaleFactor>
+  </vehicle>  -->
+
+
+
+	<object>
+    <name>terrain</name>
+    <file>terrain/diluvio5/novo4.obj</file>
+    <position>
+      <x> 0</x>
+      <y> 558 </y>
+      <z> 0 </z>
+    </position>
+    <orientation>
+      <r>0</r>
+      <p>0 </p>
+      <y>0 </y>
+    </orientation>
+  </object>
+
+
+
+
+  <rosInterfaces>   
+
+    <!-- robot_0 -->
+    <ROSOdomToPAT>
+      <topic> /robot_0/state </topic>
+      <vehicleName> robot_0 </vehicleName>
+    </ROSOdomToPAT>
+
+    <!-- robot_1 -->
+    <ROSOdomToPAT>
+      <topic> /robot_1/state </topic>
+      <vehicleName> robot_1 </vehicleName>
+    </ROSOdomToPAT>
+
+    <!-- robot_2 -->
+    <ROSOdomToPAT>
+      <topic> /robot_2/state </topic>
+      <vehicleName> robot_2 </vehicleName>
+    </ROSOdomToPAT>
+
+    <!-- robot_3 -->
+    <ROSOdomToPAT>
+      <topic> /robot_3/state </topic>
+      <vehicleName> robot_3 </vehicleName>
+    </ROSOdomToPAT>
+
+    <!-- robot_4 -->
+    <ROSOdomToPAT>
+      <topic> /robot_4/state </topic>
+      <vehicleName> robot_4 </vehicleName>
+    </ROSOdomToPAT>
+
+    <!-- robot_5 -->
+    <ROSOdomToPAT>
+      <topic> /robot_5/state </topic>
+      <vehicleName> robot_5 </vehicleName>
+    </ROSOdomToPAT>
+
+    <!-- robot_6 -->
+    <!-- <ROSOdomToPAT>
+      <topic> /robot_6/state </topic>
+      <vehicleName> robot_6 </vehicleName>
+    </ROSOdomToPAT> -->
+
+    <!-- robot_7 -->
+    <!-- <ROSOdomToPAT>
+      <topic> /robot_7/state </topic>
+      <vehicleName> robot_7 </vehicleName>
+    </ROSOdomToPAT> -->
+
+    <!-- robot_8 -->
+    <!-- <ROSOdomToPAT>
+      <topic> /robot_3/state </topic>
+      <vehicleName> robot_8 </vehicleName>
+    </ROSOdomToPAT> -->
+
+    <!-- robot_9 -->
+    <!-- <ROSOdomToPAT>
+      <topic> /robot_9/state </topic>
+      <vehicleName> robot_9 </vehicleName>
+    </ROSOdomToPAT> -->
+
+    <!-- robot_10 -->
+    <!-- <ROSOdomToPAT>
+      <topic> /robot_10/state </topic>
+      <vehicleName> robot_10 </vehicleName>
+    </ROSOdomToPAT> -->
+
+
+    <OceanSurfaceToROSOceanVehicle>
+    <topic>/robot_0/Surface/base_link</topic>
+    <vehicleName>robot_0</vehicleName>
+    <linkName>base_link</linkName>
+      </OceanSurfaceToROSOceanVehicle>  
+
+    <OceanSurfaceToROSOceanVehicle>
+    <topic>/robot_0/Surface/center_r_link</topic>
+    <vehicleName>robot_0</vehicleName>
+    <linkName>center_r_link</linkName>
+      </OceanSurfaceToROSOceanVehicle>  
+
+      <OceanSurfaceToROSOceanVehicle>
+    <topic>/robot_0/Surface/back_r_link</topic>
+    <vehicleName>robot_0</vehicleName>
+    <linkName>back_r_link</linkName>
+      </OceanSurfaceToROSOceanVehicle>  
+      
+      <OceanSurfaceToROSOceanVehicle>
+    <topic>/robot_0/Surface/back_l_link</topic>
+    <vehicleName>robot_0</vehicleName>
+    <linkName>back_l_link</linkName>
+      </OceanSurfaceToROSOceanVehicle>  
+
+      <OceanSurfaceToROSOceanVehicle>
+    <topic>/robot_0/Surface/front_r_link</topic>
+    <vehicleName>robot_0</vehicleName>
+    <linkName>front_r_link</linkName>
+      </OceanSurfaceToROSOceanVehicle>  
+      
+      <OceanSurfaceToROSOceanVehicle>
+    <topic>/robot_0/Surface/front_l_link</topic>
+    <vehicleName>robot_0</vehicleName>
+    <linkName>front_l_link</linkName>
+      </OceanSurfaceToROSOceanVehicle> 
+
+      <OceanSurfaceToROSOceanVehicle>
+    <topic>/robot_0/Surface/fwd_left</topic>
+    <vehicleName>robot_0</vehicleName>
+    <linkName>fwd_left</linkName>
+      </OceanSurfaceToROSOceanVehicle>   
+
+      <OceanSurfaceToROSOceanVehicle>
+    <topic>/robot_0/Surface/fwd_right</topic>
+    <vehicleName>robot_0</vehicleName>
+    <linkName>fwd_right</linkName>
+      </OceanSurfaceToROSOceanVehicle> 
+          
+
+
+	<OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_1/Surface/base_link</topic>
+	<vehicleName>robot_1</vehicleName>
+	<linkName>base_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+	<OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_1/Surface/center_r_link</topic>
+	<vehicleName>robot_1</vehicleName>
+	<linkName>center_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_1/Surface/back_r_link</topic>
+	<vehicleName>robot_1</vehicleName>
+	<linkName>back_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+    
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_1/Surface/back_l_link</topic>
+	<vehicleName>robot_1</vehicleName>
+	<linkName>back_l_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_1/Surface/front_r_link</topic>
+	<vehicleName>robot_1</vehicleName>
+	<linkName>front_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+    
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_1/Surface/front_l_link</topic>
+	<vehicleName>robot_1</vehicleName>
+	<linkName>front_l_link</linkName>
+    </OceanSurfaceToROSOceanVehicle> 
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_1/Surface/fwd_left</topic>
+	<vehicleName>robot_1</vehicleName>
+	<linkName>fwd_left</linkName>
+    </OceanSurfaceToROSOceanVehicle>   
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_1/Surface/fwd_right</topic>
+	<vehicleName>robot_1</vehicleName>
+	<linkName>fwd_right</linkName>
+    </OceanSurfaceToROSOceanVehicle> 
+
+
+
+	<OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_2/Surface/base_link</topic>
+	<vehicleName>robot_2</vehicleName>
+	<linkName>base_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+	<OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_2/Surface/center_r_link</topic>
+	<vehicleName>robot_2</vehicleName>
+	<linkName>center_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_2/Surface/back_r_link</topic>
+	<vehicleName>robot_2</vehicleName>
+	<linkName>back_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+    
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_2/Surface/back_l_link</topic>
+	<vehicleName>robot_2</vehicleName>
+	<linkName>back_l_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_2/Surface/front_r_link</topic>
+	<vehicleName>robot_2</vehicleName>
+	<linkName>front_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+    
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_2/Surface/front_l_link</topic>
+	<vehicleName>robot_2</vehicleName>
+	<linkName>front_l_link</linkName>
+    </OceanSurfaceToROSOceanVehicle> 
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_2/Surface/fwd_left</topic>
+	<vehicleName>robot_2</vehicleName>
+	<linkName>fwd_left</linkName>
+    </OceanSurfaceToROSOceanVehicle>   
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_2/Surface/fwd_right</topic>
+	<vehicleName>robot_2</vehicleName>
+	<linkName>fwd_right</linkName>
+    </OceanSurfaceToROSOceanVehicle> 
+    
+
+
+
+	<OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_3/Surface/base_link</topic>
+	<vehicleName>robot_3</vehicleName>
+	<linkName>base_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+	<OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_3/Surface/center_r_link</topic>
+	<vehicleName>robot_3</vehicleName>
+	<linkName>center_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_3/Surface/back_r_link</topic>
+	<vehicleName>robot_3</vehicleName>
+	<linkName>back_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+    
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_3/Surface/back_l_link</topic>
+	<vehicleName>robot_3</vehicleName>
+	<linkName>back_l_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_3/Surface/front_r_link</topic>
+	<vehicleName>robot_3</vehicleName>
+	<linkName>front_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+    
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_3/Surface/front_l_link</topic>
+	<vehicleName>robot_3</vehicleName>
+	<linkName>front_l_link</linkName>
+    </OceanSurfaceToROSOceanVehicle> 
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_3/Surface/fwd_left</topic>
+	<vehicleName>robot_3</vehicleName>
+	<linkName>fwd_left</linkName>
+    </OceanSurfaceToROSOceanVehicle>   
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_3/Surface/fwd_right</topic>
+	<vehicleName>robot_3</vehicleName>
+	<linkName>fwd_right</linkName>
+    </OceanSurfaceToROSOceanVehicle> 
+
+
+
+	<OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_4/Surface/base_link</topic>
+	<vehicleName>robot_4</vehicleName>
+	<linkName>base_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+	<OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_4/Surface/center_r_link</topic>
+	<vehicleName>robot_4</vehicleName>
+	<linkName>center_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_4/Surface/back_r_link</topic>
+	<vehicleName>robot_4</vehicleName>
+	<linkName>back_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+    
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_4/Surface/back_l_link</topic>
+	<vehicleName>robot_4</vehicleName>
+	<linkName>back_l_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_4/Surface/front_r_link</topic>
+	<vehicleName>robot_4</vehicleName>
+	<linkName>front_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+    
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_4/Surface/front_l_link</topic>
+	<vehicleName>robot_4</vehicleName>
+	<linkName>front_l_link</linkName>
+    </OceanSurfaceToROSOceanVehicle> 
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_4/Surface/fwd_left</topic>
+	<vehicleName>robot_4</vehicleName>
+	<linkName>fwd_left</linkName>
+    </OceanSurfaceToROSOceanVehicle>   
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_4/Surface/fwd_right</topic>
+	<vehicleName>robot_4</vehicleName>
+	<linkName>fwd_right</linkName>
+    </OceanSurfaceToROSOceanVehicle> 
+
+
+
+
+<OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_5/Surface/base_link</topic>
+	<vehicleName>robot_5</vehicleName>
+	<linkName>base_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+	<OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_5/Surface/center_r_link</topic>
+	<vehicleName>robot_5</vehicleName>
+	<linkName>center_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_5/Surface/back_r_link</topic>
+	<vehicleName>robot_5</vehicleName>
+	<linkName>back_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+    
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_5/Surface/back_l_link</topic>
+	<vehicleName>robot_5</vehicleName>
+	<linkName>back_l_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_5/Surface/front_r_link</topic>
+	<vehicleName>robot_5</vehicleName>
+	<linkName>front_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+    
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_5/Surface/front_l_link</topic>
+	<vehicleName>robot_5</vehicleName>
+	<linkName>front_l_link</linkName>
+    </OceanSurfaceToROSOceanVehicle> 
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_5/Surface/fwd_left</topic>
+	<vehicleName>robot_5</vehicleName>
+	<linkName>fwd_left</linkName>
+    </OceanSurfaceToROSOceanVehicle>   
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_5/Surface/fwd_right</topic>
+	<vehicleName>robot_5</vehicleName>
+	<linkName>fwd_right</linkName>
+    </OceanSurfaceToROSOceanVehicle> 
+ 
+
+
+
+<!-- 
+<OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_6/Surface/base_link</topic>
+	<vehicleName>robot_6</vehicleName>
+	<linkName>base_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+	<OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_6/Surface/center_r_link</topic>
+	<vehicleName>robot_6</vehicleName>
+	<linkName>center_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_6/Surface/back_r_link</topic>
+	<vehicleName>robot_6</vehicleName>
+	<linkName>back_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+    
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_6/Surface/back_l_link</topic>
+	<vehicleName>robot_6</vehicleName>
+	<linkName>back_l_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_6/Surface/front_r_link</topic>
+	<vehicleName>robot_6</vehicleName>
+	<linkName>front_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+    
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_6/Surface/front_l_link</topic>
+	<vehicleName>robot_6</vehicleName>
+	<linkName>front_l_link</linkName>
+    </OceanSurfaceToROSOceanVehicle> 
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_6/Surface/fwd_left</topic>
+	<vehicleName>robot_6</vehicleName>
+	<linkName>fwd_left</linkName>
+    </OceanSurfaceToROSOceanVehicle>   
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_6/Surface/fwd_right</topic>
+	<vehicleName>robot_6</vehicleName>
+	<linkName>fwd_right</linkName>
+    </OceanSurfaceToROSOceanVehicle> 
+
+
+
+
+<OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_7/Surface/base_link</topic>
+	<vehicleName>robot_7</vehicleName>
+	<linkName>base_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+	<OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_7/Surface/center_r_link</topic>
+	<vehicleName>robot_7</vehicleName>
+	<linkName>center_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_7/Surface/back_r_link</topic>
+	<vehicleName>robot_7</vehicleName>
+	<linkName>back_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+    
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_7/Surface/back_l_link</topic>
+	<vehicleName>robot_7</vehicleName>
+	<linkName>back_l_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_7/Surface/front_r_link</topic>
+	<vehicleName>robot_7</vehicleName>
+	<linkName>front_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+    
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_7/Surface/front_l_link</topic>
+	<vehicleName>robot_7</vehicleName>
+	<linkName>front_l_link</linkName>
+    </OceanSurfaceToROSOceanVehicle> 
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_7/Surface/fwd_left</topic>
+	<vehicleName>robot_7</vehicleName>
+	<linkName>fwd_left</linkName>
+    </OceanSurfaceToROSOceanVehicle>   
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_7/Surface/fwd_right</topic>
+	<vehicleName>robot_7</vehicleName>
+	<linkName>fwd_right</linkName>
+    </OceanSurfaceToROSOceanVehicle>  -->
+
+<!-- 
+
+
+<OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_8/Surface/base_link</topic>
+	<vehicleName>robot_8</vehicleName>
+	<linkName>base_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+	<OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_8/Surface/center_r_link</topic>
+	<vehicleName>robot_8</vehicleName>
+	<linkName>center_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_8/Surface/back_r_link</topic>
+	<vehicleName>robot_8</vehicleName>
+	<linkName>back_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+    
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_8/Surface/back_l_link</topic>
+	<vehicleName>robot_8</vehicleName>
+	<linkName>back_l_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_8/Surface/front_r_link</topic>
+	<vehicleName>robot_8</vehicleName>
+	<linkName>front_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+    
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_8/Surface/front_l_link</topic>
+	<vehicleName>robot_8</vehicleName>
+	<linkName>front_l_link</linkName>
+    </OceanSurfaceToROSOceanVehicle> 
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_8/Surface/fwd_left</topic>
+	<vehicleName>robot_8</vehicleName>
+	<linkName>fwd_left</linkName>
+    </OceanSurfaceToROSOceanVehicle>   
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_8/Surface/fwd_right</topic>
+	<vehicleName>robot_8</vehicleName>
+	<linkName>fwd_right</linkName>
+    </OceanSurfaceToROSOceanVehicle> 
+
+
+
+
+
+
+<OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_9/Surface/base_link</topic>
+	<vehicleName>robot_9</vehicleName>
+	<linkName>base_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+	<OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_9/Surface/center_r_link</topic>
+	<vehicleName>robot_9</vehicleName>
+	<linkName>center_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_9/Surface/back_r_link</topic>
+	<vehicleName>robot_9</vehicleName>
+	<linkName>back_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+    
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_9/Surface/back_l_link</topic>
+	<vehicleName>robot_9</vehicleName>
+	<linkName>back_l_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_9/Surface/front_r_link</topic>
+	<vehicleName>robot_9</vehicleName>
+	<linkName>front_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+    
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_9/Surface/front_l_link</topic>
+	<vehicleName>robot_9</vehicleName>
+	<linkName>front_l_link</linkName>
+    </OceanSurfaceToROSOceanVehicle> 
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_9/Surface/fwd_left</topic>
+	<vehicleName>robot_9</vehicleName>
+	<linkName>fwd_left</linkName>
+    </OceanSurfaceToROSOceanVehicle>   
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_9/Surface/fwd_right</topic>
+	<vehicleName>robot_9</vehicleName>
+	<linkName>fwd_right</linkName>
+    </OceanSurfaceToROSOceanVehicle> 
+        
+
+
+
+<OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_10/Surface/base_link</topic>
+	<vehicleName>robot_10</vehicleName>
+	<linkName>base_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+	<OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_10/Surface/center_r_link</topic>
+	<vehicleName>robot_10</vehicleName>
+	<linkName>center_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_10/Surface/back_r_link</topic>
+	<vehicleName>robot_10</vehicleName>
+	<linkName>back_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+    
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_10/Surface/back_l_link</topic>
+	<vehicleName>robot_10</vehicleName>
+	<linkName>back_l_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_10/Surface/front_r_link</topic>
+	<vehicleName>robot_10</vehicleName>
+	<linkName>front_r_link</linkName>
+    </OceanSurfaceToROSOceanVehicle>  
+    
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_10/Surface/front_l_link</topic>
+	<vehicleName>robot_10</vehicleName>
+	<linkName>front_l_link</linkName>
+    </OceanSurfaceToROSOceanVehicle> 
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_10/Surface/fwd_left</topic>
+	<vehicleName>robot_10</vehicleName>
+	<linkName>fwd_left</linkName>
+    </OceanSurfaceToROSOceanVehicle>   
+
+    <OceanSurfaceToROSOceanVehicle>
+	<topic>/robot_10/Surface/fwd_right</topic>
+	<vehicleName>robot_10</vehicleName>
+	<linkName>fwd_right</linkName>
+    </OceanSurfaceToROSOceanVehicle>  -->
+
+
+  <ROSJointStateToArm> 
+      <topic>/robot_0/joint_states</topic>
+      <vehicleName>robot_0</vehicleName>
+    </ROSJointStateToArm>
+
+	<ROSJointStateToArm> 
+   		<topic>/robot_1/joint_states</topic>
+   		<vehicleName>robot_1</vehicleName>
+   	</ROSJointStateToArm>
+
+	<ROSJointStateToArm> 
+   		<topic>/robot_2/joint_states</topic>
+   		<vehicleName>robot_2</vehicleName>
+   	</ROSJointStateToArm>
+
+	<ROSJointStateToArm> 
+   		<topic>/robot_3/joint_states</topic>
+   		<vehicleName>robot_3</vehicleName>
+   	</ROSJointStateToArm>
+
+	<ROSJointStateToArm> 
+   		<topic>/robot_4/joint_states</topic>
+   		<vehicleName>robot_4</vehicleName>
+   	</ROSJointStateToArm>
+
+	<ROSJointStateToArm> 
+   		<topic>/robot_5/joint_states</topic>
+   		<vehicleName>robot_5</vehicleName>
+   	</ROSJointStateToArm>
+
+  <!-- <ROSJointStateToArm> 
+    <topic>/robot_6/joint_states</topic>
+    <vehicleName>robot_6</vehicleName>
+  </ROSJointStateToArm>
+
+  <ROSJointStateToArm> 
+    <topic>/robot_7/joint_states</topic>
+    <vehicleName>robot_7</vehicleName>
+  </ROSJointStateToArm> -->
+
+	<!-- <ROSJointStateToArm> 
+   		<topic>/robot_8/joint_states</topic>
+   		<vehicleName>robot_8</vehicleName>
+  </ROSJointStateToArm>
+
+	<ROSJointStateToArm> 
+   		<topic>/robot_9/joint_states</topic>
+   		<vehicleName>robot_9</vehicleName>
+  </ROSJointStateToArm>
+
+	<ROSJointStateToArm> 
+   		<topic>/robot_10/joint_states</topic>
+   		<vehicleName>robot_10</vehicleName>
+  </ROSJointStateToArm> -->
+
+  </rosInterfaces>
+
+</UWSimScene>
+

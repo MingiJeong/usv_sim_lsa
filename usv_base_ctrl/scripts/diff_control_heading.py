@@ -14,7 +14,7 @@ from std_msgs.msg import Float64
 initial_pose = Odometry()
 target_pose = Odometry()
 target_distance = 0
-actuator_vel = 70
+actuator_vel = 70 # 70
 Ianterior = 0
 rate_value = 10
 Kp = 10

@@ -423,7 +423,7 @@
     <!-- Sensors -->
 
     <!-- Hokuyo Laser -->
-    <joint name="hokuyo_joint" type="revolute">
+    <!-- <joint name="hokuyo_joint" type="revolute">
         <axis xyz="0 1 0" />
         <origin xyz="0.50 0 0.15" rpy="0 0 0"/>
         <parent link="base_link"/>
@@ -453,7 +453,7 @@
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
         </inertial>
-    </link>
+    </link> -->
         <!-- Noise parameters based on published spec for Hokuyo laser
         achieving "+-30mm" accuracy at range < 10m.  A mean of 0.0m and
         stddev of 0.01m will put 99.7% of samples within 0.03m of the true
