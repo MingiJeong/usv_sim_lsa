@@ -18,6 +18,13 @@ roslaunch parse:=false → running the simulator
 * new
     * urdf.xacro includes “planar_move_plugin” for cmd_vel
 
+* Controller revisit
+    * controller revisit
+    * disable planar move_plugin
+    * enable diff_vel_control
+    * enable heading and pid control
+    * There was no D control for lin and ang vel
+
 ### tf: 
 * comment: 
     * odom_relay: node to publish global /odom topic
